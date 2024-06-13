@@ -1,0 +1,46 @@
+*{
+    text-decoration: none;
+    color: black;
+}
+
+.food-image{
+    height: 200px;
+}
+
+.food-foodRating{
+    font-size: 18px;
+    padding-right:5px ;
+}
+
+.food-foodDeliveryTime{
+    font-size: 18px;
+    padding-left:5px ;
+    
+}
+
+.food-foodtype{
+    font-size: 18px;
+    
+}
+
+.food-address{
+    font-size: 18px;
+
+}
+
+.rate-time-conatiner{
+    display: flex;
+}
+
+.food-container{
+    margin: 10px;background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 300px;
+}
+
+.food-info-container{
+    padding: 5px 20px;
+
+}
