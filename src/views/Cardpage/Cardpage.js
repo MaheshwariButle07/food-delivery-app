@@ -3,32 +3,32 @@ import { useParams } from "react-router-dom"
 import FoodData from "./../../data"
 import Navbar from "./../../components/Navbar/Navbar"
 
-const Cardpage = ()=>{
-    const {id} = useParams()
+const Cardpage = () => {
+  const { id } = useParams()
 
-    const seleceteId = FoodData.find((dataobj)=>dataobj.id===id)
+  const seleceteId = FoodData.find((dataobj) => dataobj.id === id)
 
-    return(
-        <>  
-          <Navbar/>
+  return (
+    <>
+      <Navbar />
 
-          <div className="food-container">
-      <img src={seleceteId.image} className="food-image" />
-      <div className="food-info-container">
-        <h2 className="food-hotelName">{seleceteId.hotelName}</h2>
-        <div className="rate-time-conatiner">
-          <p className="food-foodRating">{seleceteId.foodRating}</p>•
-          <p className="food-foodDeliveryTime">
-            {seleceteId.foodDeliveryTime}</p>
+      <div className="cp-card-container">
+        <div>
+          <img src={seleceteId.image} className="cp-img" />
         </div>
-        <p className="food-foodtype">{seleceteId.foodtype.foodName}</p>
-        <p className="food-foodtype">{seleceteId.foodtype.foodVerity}</p>
-        <p className="food-address">{seleceteId.address}</p>
+
+
+        <div className="info-container">
+          <h1>{seleceteId.hotelName}</h1>
+          <p className="info">{seleceteId.foodRating} | {seleceteId.foodDeliveryTime} | {seleceteId.address}</p>
+          <h2>{seleceteId.foodtype.foodName}</h2>
+          <p className="info">{seleceteId.description}</p>
+        </div>
       </div>
-    </div>
-          
-        </>
-    )
+
+
+    </>
+  )
 }
 
 export default Cardpage

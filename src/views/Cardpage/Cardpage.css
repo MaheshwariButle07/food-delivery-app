@@ -1,4 +1,40 @@
-.r-card-container{
+.cp-img{
+    height: 300px;
+    width: 400px;
+   
+}
+
+.cp-card-container{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.5px solid black;
+    padding: 10px 10px;
+    margin: 20px;
+}
+
+
+
+.cp-card-container:hover{
+    transform: rotatey(360deg);
+    transition: 750ms;
+
+}
+
+.info-container{
+   margin: 40px;
+   margin-left: 65px;
+    font-size: 20px;
+}
+
+.info{
+   padding: 5px 25px;
+}
+
+@media screen and (max-width:900px) {
+
+    .cp-card-container{
+        flex-direction: column;
+    }
     
 }
